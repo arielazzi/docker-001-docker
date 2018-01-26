@@ -51,3 +51,15 @@ A imagem é como se fosse uma receita de bolo, uma série de instruções que o 
 | `docker start ID_DO_CONTAINER`       | executa um container já criado                                                 |
 | `docker stop ID_DO_CONTAINER`        | parar um container                                                             |
 | `docker start -a -i ID_DO_CONTAINER` | executa um container já criado / `-a (attach)`: integra os terminais / `-i (interactive)`: acessa o terminal|
+| `docker rm ID_DO_CONTAINER`          | remove um container                                                            |
+| `docker container prune`             | remove todos os containers parados                                             |
+| `docker rmi NOME_DA_IMAGEM`          | remove uma imagem                                                              |
+| `docker run -d NOME_DA_IMAGEM`       | executa sem atrelar o nosso terminal ao terminal do container                  |
+| `docker run -d -P NOME_DA_IMAGEM`    | atribuir uma porta aleatória do mundo externo a porta interna do container     |
+| `docker port ID_DO_CONTAINER`        | exibe as portas do container                                                   |
+| `docker-machine ip`                  | ip da máquina virtual (caso esteja utilizando Docker ToolBox)                  |
+| `docker run -d -P --name NOME NOME_DA_IMAGEM` | Atribui um nome para o container (assim podemos rodas docker stop `NOME`) |
+| `docker run -d -p NUMERO_DA_PORTA NOME_DA_IMAGEM` | Define uma porta manualmente (docker run -d -p 12345:80 dockersamples/static-site) |
+| `docker run -d -P -e NOME_DA_VARIAVEL_DE_AMBIENTE NOME_DA_IMAGEM` | Atribuindo uma variável de ambiente (docker run -d -P -e AUTHOR="Douglas Q" dockersamples/static-site) |
+| `docker stop $(docker ps -q)`        | Parando todos os containers de uma só vez                                      |
+| `docker stop -t 0 $(docker ps -q)`   | Parando todos os containers de uma só vez sem aguardar os 10s                  |
