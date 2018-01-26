@@ -20,7 +20,8 @@ Outras tecnologias do Docker:
  * `Docker Machine` - uma ferramenta que nos permite gerenciar o Docker em um host virtual;
 
 
-## Instalação principal no Windows
+## Instalação no Windows
+
 Existem duas possibilidades para instalar o Docker no Windows. Temos a principal, utilizando o [Docker for Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows).
 
 Requisitos do uso do Docker for Windows, ou seja, devemos possuir um Windows com:
@@ -34,11 +35,19 @@ Requisitos do uso do Docker for Windows, ou seja, devemos possuir um Windows com
  É uma forma alterantiva caso não contemple os requisitos da versão `for windows`. Ainda assim, precisamos garantir que o nosso Windows seja 64bits e que ele tenha a virtualização habilitada. [Link para download](https://download.docker.com/win/stable/DockerToolbox.exe)
  
  
+ ### A diferença entre imagens e containers
+
+A imagem é como se fosse uma receita de bolo, uma série de instruções que o Docker seguirá para criar um container, que irá conter as instruções da imagem, do hello-world. Criado o container, o Docker executa-o. Então, tudo isso é feito quando executamos o docker run hello-world.
+ 
  ## Lista de comandos
  
-| Comando                     | Descrição                                                        | 
-|:---------------------------:|:----------------------------------------------------------------:| 
-| `docker version`            | exibe a versão do docker                                         |
-| `docker run NOME_DA_IMAGEM` | cria um container com a respectiva imagem passada como parâmetro |
- 
- 
+| Comando                              | Descrição                                                                      | 
+|:------------------------------------:| ------------------------------------------------------------------------------ | 
+| `docker version`                     | exibe a versão do docker                                                       |
+| `docker run NOME_DA_IMAGEM`          | cria um container com a respectiva imagem passada como parâmetro               |
+| `docker ps`                          | exibe quais os containers que estão sendo executados no momento                |
+| `docker ps -a`                       | exibe todos os containers                                                      |
+| `docker run -it NOME_DA_IMAGEM`      | integra o terminal de dentro do container (para trabalhar dentro do container) |
+| `docker start ID_DO_CONTAINER`       | executa um container já criado                                                 |
+| `docker stop ID_DO_CONTAINER`        | parar um container                                                             |
+| `docker start -a -i ID_DO_CONTAINER` | executa um container já criado / `-a (attach)`: integra os terminais / `-i (interactive)`: acessa o terminal|
