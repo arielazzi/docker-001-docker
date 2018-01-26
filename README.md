@@ -38,6 +38,14 @@ Requisitos do uso do Docker for Windows, ou seja, devemos possuir um Windows com
  ### A diferença entre imagens e containers
 
 A imagem é como se fosse uma receita de bolo, uma série de instruções que o Docker seguirá para criar um container, que irá conter as instruções da imagem, do hello-world. Criado o container, o Docker executa-o. Então, tudo isso é feito quando executamos o docker run hello-world.
+
+# Observações 
+
+ * Imagens do Docker possuem um sistema de arquivos em camadas (Layered File System) e os benefícios dessa abordagem principalmente para o download de novas imagens.
+ * Imagens são Read-Only sempre (apenas para leitura)
+ * Containers representam uma instância de uma imagem
+ * Como imagens são Read-Only os containers criam nova camada (layer) para guardar as alterações
+ * O comando Docker run e as possibilidades de execução de um container
  
  ## Lista de comandos
  
