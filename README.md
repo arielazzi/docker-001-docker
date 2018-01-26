@@ -47,6 +47,16 @@ A imagem é como se fosse uma receita de bolo, uma série de instruções que o 
  * Como imagens são Read-Only os containers criam nova camada (layer) para guardar as alterações
  * O comando Docker run e as possibilidades de execução de um container
  
+ 
+ ## Caso esteja usando o Docker ToolBox, para criar volumes: 
+ 
+Tente ir até o diretório cursoDocker e digite pwd, deverá aparecer impresso o caminho, parecido com esse /c/Users/xxx/Desktop/cursoDocker
+
+Tente copiar esse caminho e depois rodar o container:
+
+docker run -it -v "/c/Users/xxx/Desktop/cursoDocker:/var/www" ubuntu
+ 
+ 
  ## Lista de comandos
  
 | Comando                              | Descrição                                                                      | 
@@ -71,8 +81,9 @@ A imagem é como se fosse uma receita de bolo, uma série de instruções que o 
 | `docker run -d -P -e NOME_DA_VARIAVEL_DE_AMBIENTE NOME_DA_IMAGEM` | Atribuindo uma variável de ambiente (docker run -d -P -e AUTHOR="Douglas Q" dockersamples/static-site) |
 | `docker stop $(docker ps -q)`        | Parando todos os containers de uma só vez                                      |
 | `docker stop -t 0 $(docker ps -q)`   | Parando todos os containers de uma só vez sem aguardar os 10s                  |
-
-
+| `docker run -v "/var/www" NOME_DA_IMAGEM`   | cria um volume               |
+| `docker inspect ID_DO_CONTAINER`   | Inspeciona o container             |
+| `docker run -it -v "CAMINHO:/var/www" NOME_DA_IMAGEM`   | criando um volume              |
 
 
 
