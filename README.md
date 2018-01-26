@@ -57,6 +57,11 @@ Tente copiar esse caminho e depois rodar o container:
 docker run -it -v "/c/Users/xxx/Desktop/cursoDocker:/var/www" ubuntu
  
  
+## Rodando código em um container
+
+ 1. Acessar o diretório local do projeto
+ 2. Executar o comando - docker run -p 8080:3000 -d -v "$(pwd):/var/www" -w "/var/www" node npm start
+ 
  ## Lista de comandos
  
 | Comando                              | Descrição                                                                      | 
