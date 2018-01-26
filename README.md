@@ -62,6 +62,28 @@ docker run -it -v "/c/Users/xxx/Desktop/cursoDocker:/var/www" ubuntu
  1. Acessar o diretório local do projeto
  2. Executar o comando - docker run -p 8080:3000 -d -v "$(pwd):/var/www" -w "/var/www" node npm start
  
+## Criando um dockerfile
+
+``` js
+FROM node:latest  //Base
+MAINTAINER Ariel S Azzi  //criador
+ENV NODE_END=production  //variavel de ambiente
+ENV PORT=3000   //variavel de ambiente 
+COPY . /var/www //o que vai dentro da imagem 
+WORKDIR /var/www // diretorio
+RUN npm install //comando a ser executado
+ENTRYPOINT ["npm", "start"] // executa quando o container for carregado
+EXPOSE $PORT //porta que a aplicação vai rodar
+``` 
+
+### Criando a imagem 
+ * docker build -f Dockerfile -t arielazzi/node .
+ 
+ ### Criando um container a partir da nossa imagem
+ * docker run -d -p 8080:3000 arielazzi/node
+ 
+
+
  ## Lista de comandos
  
 | Comando                            | Descrição                                                                      | 
