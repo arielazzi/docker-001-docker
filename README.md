@@ -64,31 +64,31 @@ docker run -it -v "/c/Users/xxx/Desktop/cursoDocker:/var/www" ubuntu
  
  ## Lista de comandos
  
-| Comando                              | Descrição                                                                      | 
-|:------------------------------------:| ------------------------------------------------------------------------------ | 
-| `docker version`                     | exibe a versão do docker                                                       |
-| `docker run NOME_DA_IMAGEM`          | cria um container com a respectiva imagem passada como parâmetro               |
-| `docker ps`                          | exibe quais os containers que estão sendo executados no momento                |
-| `docker ps -a`                       | exibe todos os containers                                                      |
-| `docker run -it NOME_DA_IMAGEM`      | integra o terminal de dentro do container (para trabalhar dentro do container) |
-| `docker start ID_DO_CONTAINER`       | executa um container já criado                                                 |
-| `docker stop ID_DO_CONTAINER`        | parar um container                                                             |
-| `docker start -a -i ID_DO_CONTAINER` | executa um container já criado / `-a (attach)`: integra os terminais / `-i (interactive)`: acessa o terminal|
-| `docker rm ID_DO_CONTAINER`          | remove um container                                                            |
-| `docker container prune`             | remove todos os containers parados                                             |
-| `docker rmi NOME_DA_IMAGEM`          | remove uma imagem                                                              |
-| `docker run -d NOME_DA_IMAGEM`       | executa sem atrelar o nosso terminal ao terminal do container                  |
-| `docker run -d -P NOME_DA_IMAGEM`    | atribuir uma porta aleatória do mundo externo a porta interna do container     |
-| `docker port ID_DO_CONTAINER`        | exibe as portas do container                                                   |
-| `docker-machine ip`                  | ip da máquina virtual (caso esteja utilizando Docker ToolBox)                  |
-| `docker run -d -P --name NOME NOME_DA_IMAGEM` | Atribui um nome para o container (assim podemos rodas docker stop `NOME`) |
-| `docker run -d -p NUMERO_DA_PORTA NOME_DA_IMAGEM` | Define uma porta manualmente (docker run -d -p 12345:80 dockersamples/static-site) |
-| `docker run -d -P -e NOME_DA_VARIAVEL_DE_AMBIENTE NOME_DA_IMAGEM` | Atribuindo uma variável de ambiente (docker run -d -P -e AUTHOR="Douglas Q" dockersamples/static-site) |
-| `docker stop $(docker ps -q)`        | Parando todos os containers de uma só vez                                      |
-| `docker stop -t 0 $(docker ps -q)`   | Parando todos os containers de uma só vez sem aguardar os 10s                  |
-| `docker run -v "/var/www" NOME_DA_IMAGEM`   | cria um volume               |
-| `docker inspect ID_DO_CONTAINER`   | Inspeciona o container             |
-| `docker run -it -v "CAMINHO:/var/www" NOME_DA_IMAGEM`   | criando um volume              |
+| Comando                            | Descrição                                                                      | 
+|------------------------------------| ------------------------------------------------------------------------------ | 
+| docker version                     | exibe a versão do docker                                                       |
+| docker run NOME_DA_IMAGEM          | cria um container com a respectiva imagem passada como parâmetro               |
+| docker ps                          | exibe quais os containers que estão sendo executados no momento                |
+| docker ps -a                       | exibe todos os containers                                                      |
+| docker run -it NOME_DA_IMAGEM      | integra o terminal de dentro do container (para trabalhar dentro do container) |
+| docker start ID_DO_CONTAINER       | executa um container já criado                                                 |
+| docker stop ID_DO_CONTAINER        | parar um container                                                             |
+| docker start -a -i ID_DO_CONTAINER | executa um container já criado / `-a (attach)`: integra os terminais / `-i (interactive)`: acessa o terminal|
+| docker rm ID_DO_CONTAINER          | remove um container                                                            |
+| docker container prune             | remove todos os containers parados                                             |
+| docker rmi NOME_DA_IMAGEM          | remove uma imagem                                                              |
+| docker run -d NOME_DA_IMAGEM       | executa sem atrelar o nosso terminal ao terminal do container                  |
+| docker run -d -P NOME_DA_IMAGEM    | atribuir uma porta aleatória do mundo externo a porta interna do container     |
+| docker port ID_DO_CONTAINER        | exibe as portas do container                                                   |
+| docker-machine ip                  | ip da máquina virtual (caso esteja utilizando Docker ToolBox)                  |
+| docker run -d -P --name NOME NOME_DA_IMAGEM | Atribui um nome para o container (assim podemos rodas docker stop `NOME`) |
+| docker run -d -p NUMERO_DA_PORTA NOME_DA_IMAGEM | Define uma porta manualmente (docker run -d -p 12345:80 dockersamples/static-site) |
+| docker run -d -P -e NOME_DA_VARIAVEL_DE_AMBIENTE NOME_DA_IMAGEM | Atribuindo uma variável de ambiente (docker run -d -P -e AUTHOR="Douglas Q" dockersamples/static-site) |
+| docker stop $(docker ps -q)        | Parando todos os containers de uma só vez                                      |
+| docker stop -t 0 $(docker ps -q)   | Parando todos os containers de uma só vez sem aguardar os 10s                  |
+| docker run -v "/var/www" NOME_DA_IMAGEM   | cria um volume               |
+| docker inspect ID_DO_CONTAINER   | Inspeciona o container             |
+| docker run -it -v "CAMINHO:/var/www" NOME_DA_IMAGEM   | criando um volume              |
 
 
 
