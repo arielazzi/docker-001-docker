@@ -82,6 +82,14 @@ EXPOSE $PORT //porta que a aplicação vai rodar
  ### Criando um container a partir da nossa imagem
  * docker run -d -p 8080:3000 arielazzi/node
  
+ 
+ ## Subindo a imagem do Docker Hub
+ 
+ 1. docker login
+ 2. docker push arielazzi/node
+ 
+*para utiliza um container do dockerhub basta executar o comando `docker pull arielazzi/node`
+ 
 
 
  ## Lista de comandos
