@@ -104,7 +104,6 @@ docker run -it --name meu-container-de-ubuntu --network minha-rede ubuntu
 ```
 
 
-
  ## Lista de comandos
  
 | Comando                            | Descrição                                                                      | 
@@ -130,8 +129,12 @@ docker run -it --name meu-container-de-ubuntu --network minha-rede ubuntu
 | docker stop $(docker ps -q)        | Parando todos os containers de uma só vez                                      |
 | docker stop -t 0 $(docker ps -q)   | Parando todos os containers de uma só vez sem aguardar os 10s                  |
 | docker run -v "/var/www" NOME_DA_IMAGEM   | cria um volume               |
-| docker inspect ID_DO_CONTAINER   | Inspeciona o container             |
+| docker inspect ID_DO_CONTAINER     | Inspeciona o container             |
 | docker run -it -v "CAMINHO:/var/www" NOME_DA_IMAGEM   | criando um volume              |
+|docker-compose up                   | sobe os serviços criados|
+|docker-compose down                 | para os serviços criados|
+|docker-compose ps                   | lista os serviços que estão rodando|
+|docker exec -it alura-books-1 ping node2 | executa o comando ping node2 dentro do container alura-books-1|
 
 
 
