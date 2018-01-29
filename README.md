@@ -91,6 +91,19 @@ EXPOSE $PORT //porta que a aplicação vai rodar
 *para utiliza um container do dockerhub basta executar o comando `docker pull arielazzi/node`
  
 
+ ## Comunicação entre containers utilizando os seus nomes
+
+- Criando um rede 
+```
+docker network create --driver bridge minha-rede
+```
+
+- Atrelando um container a rede criada
+```
+docker run -it --name meu-container-de-ubuntu --network minha-rede ubuntu
+```
+
+
 
  ## Lista de comandos
  
